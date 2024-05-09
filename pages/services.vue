@@ -1,4 +1,15 @@
 <template>
-    <Header />
-    <h1>This is my services  page</h1>
+    <div>
+        <slider></slider>
+     <div class="container services-main">
+            <services/>
+        </div>
+    </div>
 </template>
+
+<style scoped>
+.services-main {
+    padding-bottom: 80px;
+}
+
+</style>

@@ -3,6 +3,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image'
   ],
-  css: ['~/assets/css/main.css']
+  css: ['~/assets/css/main.css'],
 
 })
