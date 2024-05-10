@@ -22,8 +22,8 @@ const serviceItems = [
     { id: 5, src: '/images/services5.jpg', text: 'HOLTER PRESSORIO' },
     { id: 6, src: '/images/services6.jpg', text: 'HOLTER ECG' },
     { id: 7, src: '/images/services7.jpg', text: 'SPIROMETRIA' },
-    // { id: 8, src: '/images/services8.jpg', text: 'hello we are' },
-    // { id: 9, src: '/images/services9.jpg', text: 'hello we are' },
+    { id: 8, src: '/images/services8.jpg', text: 'Generale' },
+    { id: 9, src: '/images/services9.jpg', text: 'Generale' },
 ]
 
 </script>
@@ -79,5 +79,17 @@ const serviceItems = [
     text-align: center;
     width: 60%;
     border-radius: 5px;
+}
+@media (max-width: 767px) {
+    .maingrid {
+    grid-template-columns: repeat(1, 1fr);
+}
+.heading-home {
+    font-size: 30px;
+    padding: 30px 0;
+}
+.para-home {
+    max-width: 95%;
+}
 }
 </style>

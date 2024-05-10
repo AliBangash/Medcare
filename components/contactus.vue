@@ -132,4 +132,25 @@
     width: 21px;
     fill: #fff;
 }
+@media (max-width: 767px){
+    .address-data {
+    width: 100%;
+}
+.address-iframe {
+    width: 100%;
+}
+.mainaddress {
+flex-direction: column;
+}
+}
+@media (max-width: 1199px) and  (min-width: 768px) {
+    .data-info {
+    padding: 50px;
+}
+}
+@media (max-width: 520px){
+    .data-info {
+    padding: 60px 20px;
+}
+}
 </style>

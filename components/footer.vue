@@ -53,4 +53,14 @@
     font-weight: 700;
     color: #fff;
 }
+@media (max-width: 767px){
+    .footer-data {
+    padding: 16px 20px !important;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-data p {
+    font-size: 12px;
+}
+}
 </style>

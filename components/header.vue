@@ -11,14 +11,6 @@
               </NuxtLink>
             </div>
           </div>
-          <div class="nav-btn">
-            <label for="nav-check">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
-
           <ul class="nav-list">
             <li>
               <div class="dropdown">
@@ -72,6 +64,13 @@
                   </svg></NuxtLink>
               </li>
             </ul>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
           </div>
         </nav>
       </header>
@@ -207,30 +206,35 @@ export default {};
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
+  .main-logo {
+    max-width: 200px;
+}
   .nav {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .nav>.nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-top: 0.2rem;
+    cursor: pointer;
+    background: #2f67aa;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
   }
 
   .nav>.nav-btn>label {
     display: inline-block;
     width: 50px;
     height: 50px;
-    padding: 13px;
+    top: 10px;
+    position: relative;
+    left: 5px;
   }
 
   .nav>.nav-btn>label>span {
     display: block;
     width: 25px;
-    height: 10px;
+    height: 7px;
     border-top: 2px solid #eee;
   }
 

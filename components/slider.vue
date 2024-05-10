@@ -55,4 +55,9 @@ const currentSlideImageUrl = ref('');
     opacity: 0.7;
     transition: transform 0.5s ease-in-out;
   }
+  @media (max-width: 767px) {
+    .slider-container {
+    height: 210px; 
+  }
+  }
   </style>
