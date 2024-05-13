@@ -6,8 +6,6 @@
   </template>
   
   <script setup >
-  
-
   const items = [
     { id: 1, imageUrl: '/slider.webp', text: 'Slide1' },
     { id: 2, imageUrl: '/slider2.webp' , text: 'Slide2' },
