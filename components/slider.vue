@@ -16,7 +16,7 @@
 const items = ref([
   { id: 1, imageUrl: '/slider.webp', text: 'Slide1' },
   { id: 2, imageUrl: '/slider2.webp', text: 'Slide2' },
-  { id: 3, imageUrl: '/slider.webp', text: 'Slide3' },
+  { id: 3, imageUrl: '/slider3.webp', text: 'Slide3' },
 ])
 </script>
 
