@@ -85,13 +85,52 @@
 
 <script setup>
 const appointment = ref({
-  name: "",
-  phone: "",
-  email: "",
-  doctor: "",
-  date: "",
-  time: "",
+  name: '',
+  phone: '',
+  email: '',
+  doctor: '',
+  date: '',
+  time: ''
 });
+
+const formatDateTime = (date, time) => {
+  const dateObj = new Date(`${date}T${time}`);
+  return dateObj.toISOString().replace('T', ' ').replace('Z', '');
+};
+
+const submitForm = async () => {
+  const formattedDateTime = formatDateTime(appointment.value.date, appointment.value.time);
+
+  const eventData = {
+    paitent_name: appointment.value.name,
+    patient_email: appointment.value.email,
+    doc_name: appointment.value.doctor,
+    start_time: formattedDateTime
+  };
+
+  const encodedData = new URLSearchParams(eventData).toString();
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+  try {
+  const response = await fetch('https://d095-182-182-251-128.ngrok-free.app/create',{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: encodedData
+  });
+  console.log('Response object:', response);
+
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+
+  const result = await response.json();
+  console.log('Event created:', result);
+} catch (error) {
+  console.error('Issue with the fetch operation:', error);
+}
+
+};
 </script>
 
 <style scoped>
@@ -182,6 +221,7 @@ button:hover {
   padding: 0 10px;
   font-size: 14px;
   color: gray;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .appointment-form-container, .opening-times {
