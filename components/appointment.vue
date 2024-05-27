@@ -76,13 +76,13 @@
       <div class="time-slot">
         <strong>Lunedì to venerdì:</strong>
         <div class="extra-div">
-        <span>08:00am - 11:00am</span>
-        <span>04:00pm - 08:00pm</span>
+        <span>08:00 - 11:00</span>
+        <span>16:00 - 20:00</span>
       </div>
       </div>
       <div class="time-slot">
         <strong>Sabato: </strong>
-        <span>08:00am - 03:00pm</span>
+        <span>08:00am - 15:00pm</span>
       </div>
       <div class="time-slot">
         <strong>Domenica: </strong>
