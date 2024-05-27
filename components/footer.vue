@@ -2,7 +2,7 @@
     <div class="footermain">
         <div class="container footer-data">
         <p>VIA PRIMO MAGGIO, 87, 29121 PIACENZA  (PC)</p>
-        <p><NuxtLink href="mailto:giovanniarata1@gmail.com">giovanniarata1@gmail.com</NuxtLink></p>
+        <p><NuxtLink href="mailto:studiomedicoarata@gmail.com">studiomedicoarata@gmail.com</NuxtLink></p>
         <div class="social-icon">
     <ul>
         <li><NuxtLink to="#" class="fb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></NuxtLink></li>

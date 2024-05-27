@@ -7,7 +7,7 @@
           <div class="nav-header">
             <div class="nav-title">
               <NuxtLink to="/">
-                <NuxtImg src="/logo.webp" alt="logo" class="main-logo" />
+                <NuxtImg src="/logo.png" alt="logo" class="main-logo" />
               </NuxtLink>
             </div>
           </div>
@@ -35,8 +35,8 @@
                     >Certificato Medico Sportivo</NuxtLink
                   >
                   <NuxtLink to="/ega-a-riposo" @click="closeMenu">ECG a Riposo</NuxtLink>
-                  <NuxtLink to="/test-da-sforzo" @click="closeMenu"
-                    >Test da Sforzo</NuxtLink
+                  <NuxtLink to="/ecg-sotto-sforzo" @click="closeMenu"
+                    >ECG-Sotto-Sforzo</NuxtLink
                   >
                   <NuxtLink to="/visita-cardiologica-con-ecg" @click="closeMenu"
                     >Visita Cardiologica con ECG</NuxtLink
@@ -47,6 +47,7 @@
                   <NuxtLink to="/holter-ecg" @click="closeMenu">Holter ECG</NuxtLink>
                   <NuxtLink to="/spirometria" @click="closeMenu">Spirometria</NuxtLink>
                   <NuxtLink to="/ecocardiografia" @click="closeMenu">Ecocardiografia</NuxtLink>
+                  <NuxtLink to="/visita-generica" @click="closeMenu">Visita-generica</NuxtLink>
                 </div>
               </div>
             </li>
@@ -195,7 +196,6 @@ const closeMenu = () => {
 }
 
 .main-logo {
-  max-width: 238px;
   height: auto;
   object-fit: cover;
   width: 100%;
@@ -340,6 +340,9 @@ const closeMenu = () => {
 }
 .nav > .nav-list{
     gap: 1rem;
+}
+.main-logo {
+  max-width: 240px;
 }
 }
 

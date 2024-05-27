@@ -3,7 +3,7 @@
     <div class="sub-services">
       <div class="bg-color"></div>
       <div class="container">
-      <h3 class="services-heading">holter-pressorio</h3>
+        <h3 class="services-heading">holter-pressorio</h3>
       </div>
     </div>
     <div class="container">
@@ -13,30 +13,16 @@
         </div>
         <div class="services-content">
           <p>
-            Only at the center in via Vismara 68 in Garbagnate is it possible to
-            carry out:
+            Il monitoraggio continuo della pressione arteriosa per 24 ore è un esame strumentale che
+            consiste nella misurazione automatica, a intervalli regolari, della pressione sanguigna e
+            della frequenza cardiaca nell’arco di 24 ore.
           </p>
-          <ul>
-            <li>
-              Nutrition visit with bioimpedance measurement and drafting of the
-              relevant food program
-            </li>
-            <li>
-              Indirect calorimetry for measuring basal metabolism (depending on
-              the amount of oxygen consumed in a resting situation)
-            </li>
-            <li>Bioimpedancemetry for the evaluation of body composition</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
-          </ul>
-          <p>
-            The visits include bioimpedance measurement for the evaluation of
-            body composition (fat and lean mass and percentage of intra and
-            extracellular water) and indirect calorimetry for the measurement of
-            basal metabolism (depending on the quantity of oxygen consumed in a
-            resting situation).
-          </p>
+          <p>Questa indagine è utile sia per confermare il sospetto diagnostico di ipertensione, sia per
+            valutare l'efficacia di una eventuale terapia in atto. Grazie alla compilazione da parte del
+            paziente di un diario delle attività della giornata e degli eventuali sintomi consente di
+            mettere in relazione i valori misurati con le attività svolte (lavoro, riposo, sonno, eccetera) e
+            di valutare l’efficacia dell’eventuale terapia antipertensiva assunta dal paziente.</p>
+
         </div>
       </div>
       <div class="add-appointment">
@@ -46,7 +32,7 @@
           <appointment />
         </div>
       </div>
-      <contactus/>
+      <contactus />
     </div>
   </div>
 </template>
@@ -87,33 +73,39 @@ const showForm = ref(false);
   font-size: 30px;
   text-transform: capitalize;
 }
+
 .subservices-main {
   padding: 50px 0 0;
   gap: 2rem;
   display: flex;
 }
+
 .services-img img {
-    width: 100%;
-    object-fit: contain;
-    height: auto;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
 }
+
 .services-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 10px 3px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px 3px;
 }
+
 .services-content li {
-    list-style: square;
+  list-style: square;
 }
+
 .services-content ul {
-    margin-left: 25px;
+  margin-left: 25px;
 }
+
 @media (max-width: 992px) {
-.subservices-main {
-flex-direction: column;
-}
-.services-heading {
-  font-size: 24px;
-}
-}
-</style>
+  .subservices-main {
+    flex-direction: column;
+  }
+
+  .services-heading {
+    font-size: 24px;
+  }
+}</style>

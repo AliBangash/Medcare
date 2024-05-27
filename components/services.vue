@@ -2,8 +2,7 @@
     <div>
       <h1 class="heading-home">I NOSTRI SERVIZI</h1>
       <p class="para-home">
-        Studio Relab è un punto di riferimento in tutta la provincia di Milano per
-        i suoi trattamenti riabilitativi.
+        Lo studio medico sportivo Arata è un punto di riferimento nella provincia di Piacenza, che opera nella prevenzione, trattamento e cura delle patologie legate all'esercizio fisico.
       </p>
       <div class="maingrid">
         <div class="services" v-for="item in serviceItems" :key="item.id">

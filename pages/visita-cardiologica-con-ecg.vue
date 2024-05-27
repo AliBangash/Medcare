@@ -3,7 +3,7 @@
     <div class="sub-services">
       <div class="bg-color"></div>
       <div class="container">
-      <h3 class="services-heading">visita-cardiologica-con-ecg</h3>
+        <h3 class="services-heading">visita-cardiologica-con-ecg</h3>
       </div>
     </div>
     <div class="container">
@@ -13,10 +13,17 @@
         </div>
         <div class="services-content">
           <p>
-            Only at the center in via Vismara 68 in Garbagnate is it possible to
-            carry out:
+            La visita cardiologica è fondamentale per la diagnosi e la cura delle principali patologie
+            cardiache tra cui l’ipertensione arteriosa, la cardiopatia ischemica, lo scompenso cardiaco, le
+            cardiomiopatie o le malattie della valvole.
           </p>
-          <ul>
+          <p>Il cardiologo raccoglierà informazioni sulla storia familiare e stile di vita . Il medico
+            procederà poi con l’esame clinico riguardante l’apparato cardiovascolare, tramite ispezione
+            ed auscultazione toracica, palpazione dei polsi arteriosi e misurazione della pressione
+            arteriosa, completando l'esame con l'eletrocardiogramma. Raccomandiamo di portare con se
+            la documentazione di eventuali terapie in atto, pregresse patlogie e se disponibili precedenti
+            eletrocardiogrammi.</p>
+          <!-- <ul>
             <li>
               Nutrition visit with bioimpedance measurement and drafting of the
               relevant food program
@@ -36,7 +43,7 @@
             extracellular water) and indirect calorimetry for the measurement of
             basal metabolism (depending on the quantity of oxygen consumed in a
             resting situation).
-          </p>
+          </p> -->
         </div>
       </div>
       <div class="add-appointment">
@@ -46,7 +53,7 @@
           <appointment />
         </div>
       </div>
-      <contactus/>
+      <contactus />
     </div>
   </div>
 </template>
@@ -87,33 +94,39 @@ const showForm = ref(false);
   font-size: 30px;
   text-transform: capitalize;
 }
+
 .subservices-main {
   padding: 50px 0 0;
   gap: 2rem;
   display: flex;
 }
+
 .services-img img {
-    width: 100%;
-    object-fit: contain;
-    height: auto;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
 }
+
 .services-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 10px 3px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px 3px;
 }
+
 .services-content li {
-    list-style: square;
+  list-style: square;
 }
+
 .services-content ul {
-    margin-left: 25px;
+  margin-left: 25px;
 }
+
 @media (max-width: 992px) {
-.subservices-main {
-flex-direction: column;
-}
-.services-heading {
-  font-size: 24px;
-}
-}
-</style>
+  .subservices-main {
+    flex-direction: column;
+  }
+
+  .services-heading {
+    font-size: 24px;
+  }
+}</style>

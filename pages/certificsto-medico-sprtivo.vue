@@ -13,30 +13,48 @@
         </div>
         <div class="services-content">
           <p>
-            Only at the center in via Vismara 68 in Garbagnate is it possible to
-            carry out:
+            Il certificato medico sportivo è il documento che attesta lo stato di sana e robusta
+costituzione necessario allo svolgimento dell’attività fisico-sportiva.
           </p>
+          <p>
+            Il Ministero della Salute distingue tipologie differenti di attività fisico-
+sportiva : agonistica e non agonistica.
+Sono qualificate come attività agonistiche le pratiche sportive eseguite in
+maniera sistematica e/o continuata da membri tesserati ad una Federazione
+sportiva nazionale o Enti sportivi riconosciuti dal Coni, che partecipano
+regolarmente a gare ed incontri agonistici.
+          </p>
+          <p>In questo caso, il certificato medico di idoneità fisica allo svolgimento di sport a
+livello agonistico è obbligatorio e deve essere rilasciato da un medico specialista
+di medicina dello sport a seguito di accurata visita che generalmente comprende:
+esami del sangue e delle urine, spirometria, test visivo
+ed elettrocardiogramma sotto sforzo.</p>
+<p>Sono considerate attività fisiche non agonistiche:</p>
           <ul>
             <li>
-              Nutrition visit with bioimpedance measurement and drafting of the
-              relevant food program
+              quelle svolte da persone tesserate in società sportive affiliate alle Federazioni
+sportive nazionali, alle Discipline associate, agli Enti di promozione sportiva
+riconosciuti dal CONI;
             </li>
             <li>
-              Indirect calorimetry for measuring basal metabolism (depending on
-              the amount of oxygen consumed in a resting situation)
+              quelle svolte dai partecipanti ai giochi sportivi studenteschi nelle fasi
+precedenti a quella nazionale;
             </li>
-            <li>Bioimpedancemetry for the evaluation of body composition</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
+            <li>quelle svolte dagli alunni degli istituti scolastici pubblici nel corso
+delle attività parascolastiche.</li>
           </ul>
           <p>
-            The visits include bioimpedance measurement for the evaluation of
-            body composition (fat and lean mass and percentage of intra and
-            extracellular water) and indirect calorimetry for the measurement of
-            basal metabolism (depending on the quantity of oxygen consumed in a
-            resting situation).
+            Secondo le linee guida del decreto 8 agosto 2014, per svolgere queste attività è
+obbligatorio un certificato medico sportivo non agonistico rilasciato da un
+medico sportivo, oppure dal medico curante o dal pediatra di libera scelta.
           </p>
+
+          <h3 class="noted_h3">Documentazione da portare alla visita:</h3>
+          <ul class="noted">
+            <li> <p>documento di identità e codice fiscale</p></li>
+            <li> <p>richiesta della società sportiva richiedente</p></li>
+            <li> <p>documentazione di eventuali problemi di salute</p></li>
+          </ul>
         </div>
       </div>
       <div class="add-appointment">
@@ -56,6 +74,11 @@ const showForm = ref(false);
 </script>
 
 <style scoped>
+h3.noted_h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2f67aa;
+}
 .sub-services {
   background-image: url("/images/sub-servics.jpg");
   background-size: cover;

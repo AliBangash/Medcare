@@ -13,29 +13,16 @@
         </div>
         <div class="services-content">
           <p>
-            Only at the center in via Vismara 68 in Garbagnate is it possible to
-            carry out:
-          </p>
-          <ul>
-            <li>
-              Nutrition visit with bioimpedance measurement and drafting of the
-              relevant food program
-            </li>
-            <li>
-              Indirect calorimetry for measuring basal metabolism (depending on
-              the amount of oxygen consumed in a resting situation)
-            </li>
-            <li>Bioimpedancemetry for the evaluation of body composition</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
-          </ul>
-          <p>
-            The visits include bioimpedance measurement for the evaluation of
-            body composition (fat and lean mass and percentage of intra and
-            extracellular water) and indirect calorimetry for the measurement of
-            basal metabolism (depending on the quantity of oxygen consumed in a
-            resting situation).
+            L'ECG dinamico secondo Holter, anche chiamato Holter cardiaco o semplicemente Holter,
+è una metodica diagnostica usata per monitorare l'attività elettrica del cuore durante un
+intervallo di tempo più o meno ampio, solitamente corrispondente a 24 ore. Durante la
+giornata gli viene chiesto di annotare su un diario le varie attività svolte (dormire, mangiare,
+assumere farmaci, lavorare, correre) e la comparsa di eventuali sintomi, in modo che ciascun
+evento registrato possa essere messo in relazione con una delle attività descritte dal paziente.
+I dispositivi attualmente in uso prevedono inoltre la presenza di un pulsante che il paziente
+può azionare in caso di insorgenza di dolore toracico o di altri sintomi rilevanti, registrando
+così un segnale che costituisce un punto di repere durante la lettura del tracciato da parte del
+medico.
           </p>
         </div>
       </div>

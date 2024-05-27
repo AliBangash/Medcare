@@ -48,3 +48,10 @@ body {
   .add-appointment{
     text-align: center;
   }
+  .services-img {
+    flex: 1;
+}
+.services-content {
+    flex: 1;
+}
+

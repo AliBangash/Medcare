@@ -49,12 +49,21 @@
 
         <div class="form-row">
           <div class="form-field">
-            <input type="date" id="date" v-model="appointment.date" required />
+            <input
+              type="date"
+              id="date"
+              v-model="appointment.date"
+              :min="minDate"
+              @change="checkSunday"
+              required
+            />
           </div>
-
           <div class="form-field">
-            <input type="time" id="time" v-model="appointment.time" required />
-          </div>
+    <select id="time" v-model="appointment.time" required>
+      <option disabled value="">Please select time</option>
+      <option v-for="time in filteredTimeOptions" :key="time" :value="time">{{ time }}</option>
+    </select>
+  </div>
         </div>
 
         <div class="form-field" style="text-align: center">
@@ -104,11 +113,44 @@ const appointment = ref({
   time: ''
 });
 
+const today = new Date().toISOString().split('T')[0];
+const minDate = ref(today);
+
+
 const formatDateTime = (date, time) => {
   const dateObj = new Date(`${date}T${time}`);
-  return dateObj.toISOString().replace('T', ' ').replace('Z', '');
+  const offsetMs = dateObj.getTimezoneOffset() * 60000; // Get the time zone offset in milliseconds
+  const localTimeMs = dateObj.getTime() - offsetMs; // Convert to local time
+  const localDateObj = new Date(localTimeMs);
+  const formattedDateTime = localDateObj.toISOString().replace('T', ' ').split('.')[0]; // Remove 'T'
+  return formattedDateTime;
 };
 
+// Function to check if a date is Sunday
+const isSunday = (date) => {
+  const selectedDate = new Date(date);
+  return selectedDate.getDay() === 0;
+};
+
+const checkSunday = () => {
+  if (isSunday(appointment.value.date)) {
+    appointment.value.date = '';
+    alert('Sundays are not available for booking. Please select another day.');
+  }
+};
+
+
+// Generate time options in 24-hour format
+const timeOptions = [];
+for (let hour = 0; hour < 24; hour++) {
+  for (let minute = 0; minute < 60; minute += 20) {
+    const formattedHour = hour.toString().padStart(2, '0');
+    const formattedMinute = minute.toString().padStart(2, '0');
+    timeOptions.push(`${formattedHour}:${formattedMinute}`);
+  }
+}
+
+//A[i call
 const submitForm = async () => {
   const formattedDateTime = formatDateTime(appointment.value.date, appointment.value.time);
 
@@ -147,9 +189,51 @@ const submitForm = async () => {
 }
 
 };
+
+
+//Filter time
+const filterTimeOptions = () => {
+  const selectedDate = new Date(appointment.value.date);
+  const selectedDay = selectedDate.getDay();
+  const filteredOptions = [];
+
+  for (let hour = 0; hour < 24; hour++) {
+    for (let minute = 0; minute < 60; minute += 20) {
+      const formattedHour = hour.toString().padStart(2, '0');
+      const formattedMinute = minute.toString().padStart(2, '0');
+      const time = `${formattedHour}:${formattedMinute}`;
+      
+      // Check if the time slot is within the allowed ranges
+      if (
+        (selectedDay >= 1 && selectedDay <= 5 && (hour >= 8 && hour < 11 || hour >= 16 && hour < 20)) ||
+        (selectedDay === 6 && (hour >= 8 && hour < 15))
+      ) {
+        filteredOptions.push(time);
+      }
+    }
+  }
+
+  return filteredOptions;
+};
+
+const filteredTimeOptions = computed(() => filterTimeOptions());
+
+//Watch
+watch([() => appointment.value.date, isSunday], ([newDate, sunday]) => {
+  if (sunday) {
+    appointment.value.date = ''; // Reset date if it's Sunday
+  } else {
+    appointment.value.time = ''; // Reset time if the date changes
+  }
+});
+
 </script>
 
 <style scoped>
+select:focus {
+  background-color: white !important;
+  font-size: 16px;
+}
 .extra-div {
     display: flex;
     gap: 10px;

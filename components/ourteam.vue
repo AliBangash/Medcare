@@ -14,7 +14,7 @@
 <script setup>
 const teamMembers = ref([
   {
-    name: 'DOTT. GIOVANNI ARATA',
+    name: 'DOTT.GIOVANNI ARATA',
     description: 'medico chirurgo specialista in medicina dello sport e dell\'esercizio fisico, specialista in cardiologia e specialista in medicina interna',
     image: '/images/doc.jpg'
   },
@@ -29,7 +29,7 @@ const teamMembers = ref([
     image: '/images/doc.jpg'
   },
   {
-    name: 'DOTT. ALESSANDRO',
+    name: 'DOTT.ALESSANDRO',
     description: 'medico chirurgo specializzando in medicina dello sport e dell\'esercizio fisico.',
     image: '/images/doc.jpg'
   },

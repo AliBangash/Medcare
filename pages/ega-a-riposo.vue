@@ -3,7 +3,7 @@
     <div class="sub-services">
       <div class="bg-color"></div>
       <div class="container">
-      <h3 class="services-heading">ega-a-riposo</h3>
+        <h3 class="services-heading">ega-a-riposo</h3>
       </div>
     </div>
     <div class="container">
@@ -13,10 +13,19 @@
         </div>
         <div class="services-content">
           <p>
-            Only at the center in via Vismara 68 in Garbagnate is it possible to
-            carry out:
+            L’elettrocardiogramma o ECG è un esame diagnostico volto a
+            registrare l’attività elettrica del cuore,
           </p>
-          <ul>
+          <p>
+            al fine di valutarne lo stato di salute ed individuare diverse
+            anomalie cardiache, patologie oppure aritmie.
+          </p>
+          <p>
+            Raccomandiamo di portare con se la documentazione di eventuali
+            terapie in atto, pregresse patlogie e se disponibili precedenti
+            eletrocardiogrammi.
+          </p>
+          <!-- <ul>
             <li>
               Nutrition visit with bioimpedance measurement and drafting of the
               relevant food program
@@ -36,24 +45,25 @@
             extracellular water) and indirect calorimetry for the measurement of
             basal metabolism (depending on the quantity of oxygen consumed in a
             resting situation).
-          </p>
+          </p> -->
         </div>
       </div>
       <div class="add-appointment">
         <button @click="showForm = !showForm" class="book-appointment">
-          per prenotare l'appuntamento clicca qui</button>
+          per prenotare l'appuntamento clicca qui
+        </button>
         <div v-if="showForm" class="appointment-form-container">
           <appointment />
         </div>
       </div>
-      <contactus/>
+      <contactus />
     </div>
   </div>
 </template>
 
 <script setup>
 const showForm = ref(false);
-</script> 
+</script>
 
 <style scoped>
 .sub-services {
@@ -93,27 +103,27 @@ const showForm = ref(false);
   display: flex;
 }
 .services-img img {
-    width: 100%;
-    object-fit: contain;
-    height: auto;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
 }
 .services-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 10px 3px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px 3px;
 }
 .services-content li {
-    list-style: square;
+  list-style: square;
 }
 .services-content ul {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 @media (max-width: 992px) {
-.subservices-main {
-flex-direction: column;
-}
-.services-heading {
-  font-size: 24px;
-}
+  .subservices-main {
+    flex-direction: column;
+  }
+  .services-heading {
+    font-size: 24px;
+  }
 }
 </style>

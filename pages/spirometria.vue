@@ -13,29 +13,15 @@
         </div>
         <div class="services-content">
           <p>
-            Only at the center in via Vismara 68 in Garbagnate is it possible to
-            carry out:
-          </p>
-          <ul>
-            <li>
-              Nutrition visit with bioimpedance measurement and drafting of the
-              relevant food program
-            </li>
-            <li>
-              Indirect calorimetry for measuring basal metabolism (depending on
-              the amount of oxygen consumed in a resting situation)
-            </li>
-            <li>Bioimpedancemetry for the evaluation of body composition</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
-            <li>Periodic checks</li>
-          </ul>
-          <p>
-            The visits include bioimpedance measurement for the evaluation of
-            body composition (fat and lean mass and percentage of intra and
-            extracellular water) and indirect calorimetry for the measurement of
-            basal metabolism (depending on the quantity of oxygen consumed in a
-            resting situation).
+            La spirometria consiste nella misurazione della quantità di aria che il
+polmone utilizza nella respirazione e nella misura dei flussi dell’aria durante la respirazione
+forzata confrontando i risultati con uno standard noto, in funzione della età, del sesso, della
+altezza e del peso. Il paziente respira dentro un boccaglio collegato con lo spirometro e gli
+viene chiesto di eseguire delle manovre respiratorie lente e forzate, ripetendole più volte in
+modo da essere certi che si misurino valori reali e non viziati da manovre non corrette.
+La spirometria serve per verificare se esista un danno nel funzionamento del nostro apparato
+respiratorio. Raccomandiamo di portare con se la documentazione di eventuali terapie in
+atto, pregresse patlogie e se disponibili precedenti esami spirometrici.
           </p>
         </div>
       </div>

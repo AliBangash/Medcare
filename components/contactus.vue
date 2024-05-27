@@ -57,7 +57,7 @@
                         </div>
                         <div class="info-details">
                             <h3>E-mail</h3>
-                            <p>info@random.it</p>
+                            <p>studiomedicoarata@gmail.com</p>
                         </div>
                     </div>
                 </div>
