@@ -80,10 +80,21 @@
         <span>Closed</span>
       </div>
     </div>
+    <Popup
+      :message="popupMessage"
+      :link="link"
+      :visible="isPopupVisible"
+      @close="isPopupVisible = false"
+    />
   </div>
 </template>
 
 <script setup>
+
+const isPopupVisible = ref(false);
+const popupMessage = ref('');
+const link = ref('');
+
 const appointment = ref({
   name: '',
   phone: '',
@@ -125,8 +136,13 @@ const submitForm = async () => {
   }
 
   const result = await response.json();
+  popupMessage.value = "Evento creato con successo.";
+  link.value = result.link;
+    isPopupVisible.value = true
   console.log('Event created:', result);
 } catch (error) {
+  popupMessage.value = 'An error occurred. Please try again.';
+    isPopupVisible.value = true;
   console.error('Issue with the fetch operation:', error);
 }
 
