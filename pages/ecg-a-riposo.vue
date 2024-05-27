@@ -3,7 +3,7 @@
     <div class="sub-services">
       <div class="bg-color"></div>
       <div class="container">
-        <h3 class="services-heading">ega-a-riposo</h3>
+        <h3 class="services-heading">ecg-a-riposo</h3>
       </div>
     </div>
     <div class="container">

@@ -34,7 +34,7 @@
                   <NuxtLink to="/certificsto-medico-sprtivo" @click="closeMenu"
                     >Certificato Medico Sportivo</NuxtLink
                   >
-                  <NuxtLink to="/ega-a-riposo" @click="closeMenu">ECG a Riposo</NuxtLink>
+                  <NuxtLink to="/ecg-a-riposo" @click="closeMenu">ECG a Riposo</NuxtLink>
                   <NuxtLink to="/ecg-sotto-sforzo" @click="closeMenu"
                     >ECG-Sotto-Sforzo</NuxtLink
                   >

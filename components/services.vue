@@ -29,7 +29,7 @@
       id: 2,
       src: "/images/services2.jpg",
       text: "ECG A RIPOSO",
-      link: "/ega-a-riposo",
+      link: "/ecg-a-riposo",
     },
     {
       id: 3,
@@ -70,8 +70,8 @@
     {
       id: 9,
       src: "/images/services9.jpg",
-      text: "Generale",
-      link: "/test-da-sforzo",
+      text: "Visita Generale",
+      link: "/visita-generica",
     },
   ];
   </script>
@@ -118,7 +118,7 @@
   
   .services img {
     width: 100%;
-    height: auto;
+    height: 235px;
     display: block;
     object-fit: cover;
     transition: transform 0.3s ease;
