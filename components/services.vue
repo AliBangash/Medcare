@@ -34,8 +34,8 @@
     {
       id: 3,
       src: "/images/services3.jpg",
-      text: "TEST DA SFORZO",
-      link: "/test-da-sforzo",
+      text: "Ecg Sotto Sforzo", 
+      link: "/ecg-sotto-sforzo",
     },
     {
       id: 4,
