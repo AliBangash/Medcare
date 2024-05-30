@@ -2,4 +2,5 @@
     <Header/>
     <slot/>
     <Footer/>
+    <Advertisement/>
 </template>>

@@ -150,7 +150,7 @@ for (let hour = 0; hour < 24; hour++) {
   }
 }
 
-//A[i call
+//Api call
 const submitForm = async () => {
   const formattedDateTime = formatDateTime(appointment.value.date, appointment.value.time);
 
@@ -164,7 +164,7 @@ const submitForm = async () => {
   const encodedData = new URLSearchParams(eventData).toString();
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   try {
-  const response = await fetch('https://d095-182-182-251-128.ngrok-free.app/create',{
+  const response = await fetch('https://b8ad-2407-d000-a-4b47-e04e-3de5-84de-2fe7.ngrok-free.app/create',{
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
