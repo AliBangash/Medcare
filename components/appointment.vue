@@ -61,7 +61,8 @@
           <div class="form-field">
     <select id="time" v-model="appointment.time" required>
       <option disabled value="">Please select time</option>
-      <option v-for="time in filteredTimeOptions" :key="time" :value="time">{{ time }}</option>
+    <option v-for="timeOption in filteredTimeOptions" :key="timeOption.time" :value="timeOption.time" :disabled="timeOption.disabled">{{ timeOption.time }}</option>
+
     </select>
   </div>
         </div>
@@ -149,6 +150,43 @@ for (let hour = 0; hour < 24; hour++) {
     timeOptions.push(`${formattedHour}:${formattedMinute}`);
   }
 }
+const logBookedSlots = () => {
+  const selectedDate = appointment.value.date;
+  if (bookedEvents.value[selectedDate]) {
+    console.log(`Booked slots for ${selectedDate}:`, bookedEvents.value[selectedDate]);
+  } else {
+    console.log(`No booked slots for ${selectedDate}`);
+  }
+};
+ 
+//Get call
+const bookedEvents = ref({});
+
+const fetchBookedEvents = async () => {
+  try {
+    const response = await fetch('https://b8ad-2407-d000-a-4b47-e04e-3de5-84de-2fe7.ngrok-free.app/get_all_booked_events');
+    if (!response.ok) {
+      throw new Error('Failed to fetch booked events');
+    }
+    const result = await response.json();
+    const groupedEvents = result.events.reduce((acc, event) => {
+      const date = event.start_time.split(' ')[0]; // Assuming start_time format is 'YYYY-MM-DD HH:MM:SS'
+      if (!acc[date]) {
+        acc[date] = [];
+      }
+      acc[date].push(event);
+      return acc;
+    }, {});
+    bookedEvents.value = groupedEvents;
+    console.log('Fetched booked events:', bookedEvents.value);
+    logBookedSlots(); // Log booked slots after fetching events
+  } catch (error) {
+    console.error('Error fetching booked events:', error);
+  }
+};
+onMounted(() => {
+  fetchBookedEvents();
+});
 
 //Api call
 const submitForm = async () => {
@@ -193,6 +231,10 @@ const submitForm = async () => {
 
 //Filter time
 const filterTimeOptions = () => {
+  if (!appointment.value.date) {
+    return [];
+  }
+
   const selectedDate = new Date(appointment.value.date);
   const selectedDay = selectedDate.getDay();
   const filteredOptions = [];
@@ -203,19 +245,20 @@ const filterTimeOptions = () => {
       const formattedMinute = minute.toString().padStart(2, '0');
       const time = `${formattedHour}:${formattedMinute}`;
       
-      // Check if the time slot is within the allowed ranges
       if (
         (selectedDay >= 1 && selectedDay <= 5 && (hour >= 8 && hour < 11 || hour >= 16 && hour < 20)) ||
         (selectedDay === 6 && (hour >= 8 && hour < 15))
       ) {
-        filteredOptions.push(time);
+        const dateTime = `${appointment.value.date} ${time}:00`; // Format 'YYYY-MM-DD HH:MM:SS'
+        
+        const isBooked = bookedEvents.value[appointment.value.date]?.some(event => event.start_time === dateTime);
+        filteredOptions.push({ time, disabled: isBooked });
       }
     }
   }
 
   return filteredOptions;
 };
-
 const filteredTimeOptions = computed(() => filterTimeOptions());
 
 //Watch
@@ -224,9 +267,9 @@ watch([() => appointment.value.date, isSunday], ([newDate, sunday]) => {
     appointment.value.date = ''; // Reset date if it's Sunday
   } else {
     appointment.value.time = ''; // Reset time if the date changes
+   fetchBookedEvents().then(() => logBookedSlots());  // Fetch booked events when the date changes
   }
 });
-
 </script>
 
 <style scoped>
